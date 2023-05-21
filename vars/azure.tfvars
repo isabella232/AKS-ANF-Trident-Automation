@@ -1,0 +1,5 @@
+azure_subscription_id = ""
+azure_sp_tenant_id = ""
+azure_sp_client_id = ""
+azure_sp_secret = ""
+trident_location = "westus"

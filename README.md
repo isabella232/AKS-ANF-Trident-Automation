@@ -1,0 +1,1 @@
+azure cli, kubectl, terraform needs to be installed
