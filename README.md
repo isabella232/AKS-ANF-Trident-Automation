@@ -31,6 +31,7 @@ Before you begin, ensure that the following prerequisites are met:
 
 ## Solution Architecture
 
+![alt-text](/images/AKS_ANF_Trident_Automation_Architecture.png)
 
 Note: The solution is provided as-is. Please test before deploying to production
 
