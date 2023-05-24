@@ -41,7 +41,7 @@ if ! [ $? -eq 0 ]; then
     exit 2 ; 
 fi
 
-temp="{ \"version\": 1, \"storageDriverName\": \"azure-netapp-files\", \"subscriptionID\": \"${azure_subscription_id}\", \"tenantID\": \"${azure_sp_tenant_id}\", \"clientID\": \"${appId}\", \"clientSecret\": \"${password}\", \"location\": \"${trident_location}\", \"serviceLevel\": \"${az_netapp_pool_service_level_primary}\"}"
+temp="{ \"version\": 1, \"storageDriverName\": \"azure-netapp-files\", \"subscriptionID\": \"${azure_subscription_id}\", \"tenantID\": \"${azure_sp_tenant_id}\", \"clientID\": \"${azure_sp_client_id}\", \"clientSecret\": \"${azure_sp_secret}\", \"location\": \"${trident_location}\", \"serviceLevel\": \"${az_netapp_pool_service_level_primary}\"}"
 echo "storage-backend-config > "
 echo $temp
 echo $temp > ./anf-storage-backend-config.json
