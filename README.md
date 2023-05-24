@@ -1,6 +1,6 @@
 azure cli, kubectl, terraform needs to be installed
 
-# AKS with ANF deployed using Astra Trident CSI automated via Terraform 
+# Terraform Automation for deploying AKS with ANF using NetApp Astra Trident CSI
 AKS (Azure Kubernetes Service) is a first-party managed kubernetes offering by Azure allowing for quick and easy setup of the kubernetes cluster. Azure creates and configures the control plane automatically when a new AKS cluster is provisioned.
 
 ANF (Azure NetApp Files) is a high-performance, enterprise-class, metered file-storage service. Follow the steps in this documentation to provision and configure Azure NetApp Files as a persistent volume (PV) option for applications running on the AKS cluster.
