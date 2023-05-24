@@ -1,5 +1,3 @@
-azure cli, kubectl, terraform needs to be installed
-
 # Terraform Automation for deploying AKS with ANF using NetApp Astra Trident CSI
 AKS (Azure Kubernetes Service) is a first-party managed kubernetes offering by Azure allowing for quick and easy setup of the kubernetes cluster. Azure creates and configures the control plane automatically when a new AKS cluster is provisioned.
 
