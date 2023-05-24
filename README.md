@@ -68,10 +68,10 @@ anf.tfvars :
 | `az_netapp_pool_service_level_primary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
 | `az_netapp_pool_service_level_secondary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
 | `az_dual_protocol_bool` | String | (Required) True to enable NFS and SMB, False to restrict to a single protocol |
-| `az_smb_server_username` | String | (Required) Username to create ActiveDirectory object. |
-| `az_smb_server_password` | String | (Required) User Password to create ActiveDirectory object. |
-| `az_smb_server_name` | String | (Required) Server Name to create ActiveDirectory object. |
-| `az_smb_dns_servers` | String | (Required) DNS Server IP to create ActiveDirectory object. |
+| `az_smb_server_username` | String | (Optional) Username to create ActiveDirectory object. |
+| `az_smb_server_password` | String | (Optional) User Password to create ActiveDirectory object. |
+| `az_smb_server_name` | String | (Optional) Server Name to create ActiveDirectory object. |
+| `az_smb_dns_servers` | String | (Optional) DNS Server IP to create ActiveDirectory object. |
 
 
 
