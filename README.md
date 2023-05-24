@@ -63,8 +63,8 @@ anf.tfvars :
 | `az_vnet_secondary_address_space` | String | (Required) The address space to be used by the newly created vnet for ANF secondary volume deployment. |
 | `az_subnet_primary_address_prefix` | String | (Required) The subnet address prefix to be used by the newly created vnet for ANF primary volume deployment. |
 | `az_subnet_secondary_address_prefix` | String | (Required) The subnet address prefix to be used by the newly created vnet for ANF secondary volume deployment. |
-| `az_capacity_pool_size_primary` | Integer | (Required) Capactiy Pool Size mentioned in TB. |
-| `az_capacity_pool_size_secondary` | Integer | (Required) Capactiy Pool Size mentioned in TB. |
+| `az_capacity_pool_size_primary` | Integer | (Required) Capacity Pool Size mentioned in TB. |
+| `az_capacity_pool_size_secondary` | Integer | (Required) Capacity Pool Size mentioned in TB. |
 | `az_netapp_pool_service_level_primary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
 | `az_netapp_pool_service_level_secondary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
 | `az_dual_protocol_bool` | String | (Required) True to enable NFS and SMB, False to restrict to a single protocol |
@@ -87,11 +87,11 @@ anf.tfvars :
 
 3. Update the values of variables required in the *vars* folder (Refer variable description table) and save the files.
    
-4. Navigate back to the root of ther folder and login to Azure CLI to allow terraform to use the azure account to provision the required constructs:
+4. Navigate back to the root of the folder and login to Azure CLI to allow terraform to use the azure account to provision the required constructs:
 
 ``` az login ```
 
-5. Inititialize terraform:
+5. Initialize terraform:
 
 ``` terraform init ```
 
@@ -103,11 +103,11 @@ anf.tfvars :
 
 ``` terraform plan --var-file=./vars/aks-cluster.tfvars -var-file=./vars/anf.tfvars```
 
-1. If satisfied with the output of the terrform plan command, run the apply command to start resource provisioning:
+1. If satisfied with the output of the terraform plan command, run the apply command to start resource provisioning:
 
 ``` terraform apply --var-file=./vars/aks-cluster.tfvars -var-file=./vars/anf.tfvars```
 
-*Optional*: To destory the constructs created by this script, delete any volumes created in ANF manually and run the command:
+*Optional*: To destroy the constructs created by this script, delete any volumes created in ANF manually and run the command:
 
 ``` terraform destroy --var-file=./vars/aks-cluster.tfvars -var-file=./vars/anf.tfvars```
 
