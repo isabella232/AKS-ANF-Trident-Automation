@@ -16,7 +16,7 @@ resource "azurerm_kubernetes_cluster" "default" {
     node_count      = var.nodeCount
     vm_size         = "Standard_B2s"
     os_disk_size_gb = 30
-    vnet_subnet_id = azurerm_subnet.aks_subnet[0].id
+    vnet_subnet_id = azurerm_subnet.aks_subnet.id
   }
 
   service_principal {
@@ -39,8 +39,8 @@ resource "null_resource" "trident-installer" {
       kubernetes_cluster_name   = azurerm_kubernetes_cluster.default.name
       azure_subscription_id = var.azure_subscription_id,
       azure_sp_tenant_id = var.azure_sp_tenant_id,
-      azure_sp_client_id = var.azure_sp_client_id,
-      azure_sp_secret = var.azure_sp_secret,
+      azure_sp_client_id = var.appId,
+      azure_sp_secret = var.password,
       trident_location = var.trident_location
       az_netapp_pool_service_level_primary = var.az_netapp_pool_service_level_primary
      }

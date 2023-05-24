@@ -5,7 +5,6 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_virtual_network" "example_primary" {
-  count = var.az_vnet_primary_creation_bool ? 1:0
   name                = "${var.az_prefix}-virtualnetwork-primary"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
@@ -13,10 +12,9 @@ resource "azurerm_virtual_network" "example_primary" {
 }
 
 resource "azurerm_subnet" "example_primary" {
-  count = var.az_subnet_primary_creation_bool ? 1:0
   name                 = "${var.az_prefix}-subnet"
   resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example_primary[0].name
+  virtual_network_name = azurerm_virtual_network.example_primary.name
   address_prefixes     = [var.az_subnet_primary_address_prefix]
 
   delegation {
@@ -30,15 +28,13 @@ resource "azurerm_subnet" "example_primary" {
 }
 
 resource "azurerm_subnet" "aks_subnet" {
-  count = var.az_subnet_primary_creation_bool ? 1:0
   name                 = "${var.az_prefix}-aks-subnet"
   resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example_primary[0].name
+  virtual_network_name = azurerm_virtual_network.example_primary.name
   address_prefixes     = [var.aks_subnet_cidr]
 }
 
 resource "azurerm_virtual_network" "example_secondary" {
-  count = var.az_vnet_secondary_creation_bool ? 1:0
   name                = "${var.az_prefix}-virtualnetwork-secondary"
   location            = var.az_alt_location
   resource_group_name = azurerm_resource_group.example.name
@@ -46,10 +42,9 @@ resource "azurerm_virtual_network" "example_secondary" {
 }
 
 resource "azurerm_subnet" "example_secondary" {
-  count = var.az_subnet_secondary_creation_bool ? 1:0
   name                 = "${var.az_prefix}-subnet"
   resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example_secondary[0].name
+  virtual_network_name = azurerm_virtual_network.example_secondary.name
   address_prefixes     = [var.az_subnet_secondary_address_prefix]
 
   delegation {
