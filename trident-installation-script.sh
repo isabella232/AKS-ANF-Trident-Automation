@@ -131,7 +131,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: tdhruv757/image-server-app:latest
+        image: psairam284/image-server-app:latest
         ports:
         - containerPort: 80
         volumeMounts:
