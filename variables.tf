@@ -52,38 +52,17 @@ variable "az_vnet_primary_address_space" {
     description = "The address space used by the primary virtual network"
 }
 
-variable "az_vnet_secondary_address_space" {
-    description = "The address space used by the secondary virtual network"
-}
-
 variable "az_subnet_primary_address_prefix" {
     description = "The address prefix used to create the primary subnet"
-}
-
-variable "az_subnet_secondary_address_prefix" {
-    description = "The address prefix used to create the secondary subnet"
 }
 
 variable "az_capacity_pool_size_primary" {
   description = "Enter the size in Tb for the primary netapp capacity pool"
 }
 
-variable "az_capacity_pool_size_secondary" {
-  description = "Enter the size in Tb for the secondary netapp capacity pool"
-}
-
 variable "az_netapp_pool_service_level_primary" {
   description = "Enter the primary service level for creating the netapp pool"
 }
-
-variable "az_netapp_pool_service_level_secondary" {
-  description = "Enter the secondary service level for creating the netapp pool"
-}
-
-variable "az_alt_location" {
-  description = "The Azure location where the secondary volume will be created. Ensure to make use of Azure supported regional pairs (https://learn.microsoft.com/en-gb/azure/azure-netapp-files/cross-region-replication-introduction#supported-region-pairs)"
-}
-
 
 # ANF Dual protocol vars
 
