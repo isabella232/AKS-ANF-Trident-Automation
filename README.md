@@ -11,7 +11,7 @@ This solution aims to provide a one-touch option for users looking to deploy AKS
 The solution provides the following features:
 
 * Deploy an AKS Cluster
-* Deploy ANF in HA mode across 2 regions
+* Deploy Azure NetApp Files (ANF)
 * Install and configure Astra Trident
 * Deploy a sample application to showcase the integration works end-to-end
 
@@ -55,16 +55,11 @@ anf.tfvars :
 | Name | Type | Description |
 | --- | --- | --- |
 | `az_location ` | String | (Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. |
-| `az_alt_location ` | String | (Required) The Azure location where the secondary volume will be created|
 | `az_prefix` | String | (Required) The name of the resource group where the NetApp Volume should be created. Changing this forces a new resource to be created. |
 | `az_vnet_primary_address_space` | String | (Required) The address space to be used by the newly created vnet for ANF primary volume deployment. |
-| `az_vnet_secondary_address_space` | String | (Required) The address space to be used by the newly created vnet for ANF secondary volume deployment. |
 | `az_subnet_primary_address_prefix` | String | (Required) The subnet address prefix to be used by the newly created vnet for ANF primary volume deployment. |
-| `az_subnet_secondary_address_prefix` | String | (Required) The subnet address prefix to be used by the newly created vnet for ANF secondary volume deployment. |
 | `az_capacity_pool_size_primary` | Integer | (Required) Capacity Pool Size mentioned in TB. |
-| `az_capacity_pool_size_secondary` | Integer | (Required) Capacity Pool Size mentioned in TB. |
 | `az_netapp_pool_service_level_primary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
-| `az_netapp_pool_service_level_secondary` | String | (Required) The target performance of the file system. Valid values include `Premium` , `Standard` , or `Ultra`. |
 | `az_dual_protocol_bool` | String | (Required) True to enable NFS and SMB, False to restrict to a single protocol |
 | `az_smb_server_username` | String | (Optional) Username to create ActiveDirectory object. |
 | `az_smb_server_password` | String | (Optional) User Password to create ActiveDirectory object. |
