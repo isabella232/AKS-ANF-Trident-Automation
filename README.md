@@ -22,7 +22,6 @@ Before you begin, ensure that the following prerequisites are met:
   * Azure CLI
   * Terraform
   * Kubectl
-* Connectivity from the machine where the script is run to Azure environment to ensure terraform is able to reach Azure to provision the required constructs
 * An Azure account with sufficient permissions to provision AKS, ANF, vnets, subnets and other constructs mentioned in the .tf files
 
 
