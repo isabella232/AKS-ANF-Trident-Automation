@@ -22,7 +22,7 @@ Before you begin, ensure that the following prerequisites are met:
   * Azure CLI
   * Terraform
   * Kubectl
-* An Azure account with sufficient permissions to provision AKS, ANF, vnets, subnets and other constructs mentioned in the .tf files
+* An Azure account with sufficient permissions to provision AKS, ANF, vnets, subnets and other constructs mentioned in the .tf files (cusom-role.json can be used to assign the minimum permissions required for deployment)
 
 
 

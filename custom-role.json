@@ -1,0 +1,43 @@
+{
+    "properties": {
+        "roleName": "AKS-ANF-Automation-Role",
+        "description": "Minimum permissions required to deploy the Terraform script for Azure Kubernetes Service, Azure NetApp Files, and Astra Trident.",
+        "assignableScopes": [
+            "/subscriptions/${replace-subscription-id}"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/write",
+                    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/write",
+                    "Microsoft.Network/virtualNetworks/delete",
+                    "Microsoft.Network/virtualNetworks/subnets/join/action",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/virtualNetworks/subnets/write",
+                    "Microsoft.Network/virtualNetworks/subnets/delete",
+                    "Microsoft.ContainerService/managedClusters/read",
+                    "Microsoft.ContainerService/managedClusters/write",
+                    "Microsoft.ContainerService/managedClusters/delete",
+                    "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
+                    "Microsoft.ContainerService/managedClusters/listClusterUserCredential/action",
+                    "Microsoft.NetApp/netAppAccounts/read",
+                    "Microsoft.NetApp/netAppAccounts/write",
+                    "Microsoft.NetApp/netAppAccounts/delete",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/delete",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}

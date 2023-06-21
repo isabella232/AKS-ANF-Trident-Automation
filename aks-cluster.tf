@@ -3,6 +3,11 @@ resource "random_pet" "prefix" {}
 provider "azurerm" {
   features {}
   skip_provider_registration = "true"
+
+  client_id       = var.appId != "" ? var.appId : null
+  client_secret   = var.password != "" ? var.password : null
+  tenant_id       = var.azure_sp_tenant_id != "" ? var.azure_sp_tenant_id : null
+  subscription_id = var.azure_subscription_id != "" ? var.azure_subscription_id : null
 }
 
 resource "azurerm_kubernetes_cluster" "default" {

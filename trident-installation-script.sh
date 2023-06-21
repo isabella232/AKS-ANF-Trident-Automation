@@ -1,6 +1,10 @@
 #!/bin/bash
 
 echo "Setting AKS kubectl config"
+export ARM_CLIENT_ID="${azure_sp_client_id}"
+export ARM_CLIENT_SECRET="${azure_sp_secret}"
+export ARM_TENANT_ID="${azure_sp_tenant_id}"
+
 az aks get-credentials --resource-group "${resource_group_name}" --name "${kubernetes_cluster_name}"
 
 
