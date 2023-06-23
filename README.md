@@ -40,7 +40,6 @@ aks-cluster.tfvars :
 | --- | --- | --- |
 | `appId ` | String | (Required) Azure Kubernetes Service Cluster service principal ID |
 | `password ` | String | (Required) Azure Kubernetes Service Cluster service principal password |
-| `environmentName ` | String | (Required) Environment Name used for AKS |
 | `location ` | String | (Required) Region where AKS is deployed |
 | `nodeCount ` | String | (Required) Number of nodes needed as part of the AKS cluster |
 | `aks_subnet_cidr ` | String | (Required) Enter the CIDR range (/16 subnet) for the Subnet to be created for AKS cluster |

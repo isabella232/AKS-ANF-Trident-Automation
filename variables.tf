@@ -8,10 +8,6 @@ variable "password" {
   description = "Azure Kubernetes Service Cluster password"
 }
 
-variable "environmentName" {
-  description = "Environment Name used for AKS"
-}
-
 variable "location" {
   description = "Region where AKS is deployed"
 }

@@ -30,7 +30,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   }
 
   tags = {
-    environment = var.environmentName
+    environment = var.az_prefix
   }
 }
 
