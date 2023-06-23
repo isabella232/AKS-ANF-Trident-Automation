@@ -7,8 +7,8 @@ Astra Trident is an open-source and fully supported storage orchestrator for con
 
 This solution aims to provide a one-touch option for users looking to deploy AKS with ANF as the backend storage allowing for dynamic volume provisioning via Astra Trident CSI using terraform. 
 
-## Features
-The solution provides the following features:
+## Workflows
+The solution provides the following workflows:
 
 * Deploy an AKS Cluster
 * Deploy Azure NetApp Files (ANF)
