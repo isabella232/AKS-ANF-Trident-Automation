@@ -70,7 +70,7 @@ anf.tfvars :
 
 1. Clone the repository:
 
-``` git clone https://github.com/NetApp-Automation/AKS-ANF-Trident-Automation.git```
+``` git clone https://github.com/NetApp/AKS-ANF-Trident-Automation.git```
 
 2. Navigate into the cloned folder:
 
@@ -111,5 +111,5 @@ Copyright: 2023 NetApp Inc.
 
 ## Author Information
 
-- [Dhruv Tyagi](mailto:dhruv.tyagi@netapp.com) - NetApp Solutions Engineering Team
+- Dhruv Tyagi
 - [Niyaz Mohamed](mailto:niyaz.mohamed@netapp.com) - NetApp Solutions Engineering Team
